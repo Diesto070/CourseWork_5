@@ -41,9 +41,9 @@ jobs:
       ALLOWED_HOSTS: localhost,127.0.0.1
       DATABASE_URL: sqlite:///db.sqlite3
       POSTGRES_HOST: localhost
-      POSTGRES_DB: test_db
+      POSTGRES_DB: test_db_1
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: 951321
       CELERY_BROKER_URL: memory://localhost
 
     services:
@@ -51,8 +51,8 @@ jobs:
         image: postgres:15
         env:
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: test_db
+          POSTGRES_PASSWORD: 951321
+          POSTGRES_DB: test_db_1
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -96,7 +96,7 @@ jobs:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
       run: |
         echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
-        echo "DATABASE_URL=postgresql://postgres:postgres@localhost:5432/test_db" >> $GITHUB_ENV
+        echo "DATABASE_URL=postgresql://postgres:951321@localhost:5432/test_db_1" >> $GITHUB_ENV
         echo "DEBUG=False" >> $GITHUB_ENV
 
     - name: Run migrations
@@ -145,10 +145,10 @@ jobs:
           key: ${{ secrets.SSH_KEY_PRIVATE }}
           script: |
             # 1. Переходим в папку проекта
-            cd /home/alexandra/trackerhabit_projects/CourseWork_5_Tracker_Habit
+            cd /home/diesto070//CourseWork_5
             
             # 2. Получаем последние изменения кода
-            git pull origin feature/2_final_task
+            git pull origin feature/CourseWork_5
             
             # 3. Получаем новый образ
             docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }}
