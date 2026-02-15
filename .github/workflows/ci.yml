@@ -148,7 +148,7 @@ jobs:
             cd /home/diesto070/coursework
             
             # 2. Получаем последние изменения кода
-            git pull origin feature/CourseWork_5
+            git pull origin feature/final_project
             
             # 3. Получаем новый образ
             docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }}
