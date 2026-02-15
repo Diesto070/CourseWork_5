@@ -145,7 +145,7 @@ jobs:
           key: ${{ secrets.SSH_KEY_PRIVATE }}
           script: |
             # 1. Переходим в папку проекта
-            cd /home/diesto070//CourseWork_5
+            cd /CourseWork_5
             
             # 2. Получаем последние изменения кода
             git pull origin feature/CourseWork_5
