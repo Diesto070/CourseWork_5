@@ -273,3 +273,11 @@ pyproject.toml - зависимости
 Запуск тестов:
 ```python manage.py test habits.tests```
 ```python manage.py test users.tests```
+
+
+### 📞 Контакты и поддержка
+Проект разработан в рамках учебного курса. Для вопросов и предложений обращайтесь через Issues в репозитории.
+
+**Автор:** Diesto070
+
+**GitHub:** [Diesto070](https://github.com/Diesto070)
