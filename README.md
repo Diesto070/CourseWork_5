@@ -102,8 +102,8 @@ sudo usermod -aG docker $USER
 
 ``` 
 # Создайте папку для проекта
-mkdir -p /trackerhabit_projects/
-cd /trackerhabit_projects/
+mkdir -p /coursework5/
+cd /coursework5/
 
 # Клонируйте репозиторий
 git clone <ваш-репозиторий> .
