@@ -148,7 +148,7 @@ EOF
 ### Создание Docker Hub репозитория:
 1. Зарегистрируйтесь на Docker Hub
 
-2. Создайте репозиторий с именем tracker_habit
+2. Создайте репозиторий с именем coursework
 
 3. Создайте Access Token: Settings → Security → New Access Token
 

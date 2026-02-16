@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 env:
   PYTHON_VERSION: "3.11"
-  DOCKER_IMAGE_NAME: "tracker_habit"
+  DOCKER_IMAGE_NAME: "coursework"
 
 jobs:
   lint:
